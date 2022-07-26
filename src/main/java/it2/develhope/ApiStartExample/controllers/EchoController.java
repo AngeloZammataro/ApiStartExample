@@ -1,6 +1,7 @@
 package it2.develhope.ApiStartExample.controllers;
 
 import it2.develhope.ApiStartExample.DTO_Data_Transfer_Object.UserDTO;
+import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -68,6 +69,7 @@ public class EchoController { //creiamo un rest controller
         <artifactId>spring-boot-starter-validation</artifactId>
     </dependency>
      */
+    
     public String postRoot(@Valid @RequestBody UserDTO userDTO, HttpServletRequest request, HttpServletResponse response){
         return userDTO.toString();
     }
